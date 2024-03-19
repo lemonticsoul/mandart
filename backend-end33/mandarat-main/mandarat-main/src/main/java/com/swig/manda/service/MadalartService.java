@@ -94,6 +94,7 @@ public class MadalartService {
         dto.setMissionIndex(savedDetail.getMissionIndex());
         dto.setGoalText(savedDetail.getGoalText());
         dto.setGoalList(savedDetail.getGoalList());
+        dto.setId(savedDetail.getId());
         dto.setUserId(savedDetail.getMember().getUserId());
 
         return dto;
@@ -135,7 +136,6 @@ public class MadalartService {
         List<Detail> details = detailRepository.findByMember_UserId(userId);
 
 
-
         List<DetailDto> detailDtos = details.stream()
                 .map(this::convertDetailEntityToDto)
                 .collect(Collectors.toList());
@@ -154,6 +154,7 @@ public class MadalartService {
 
     private DetailDto convertDetailEntityToDto(Detail detail) {
         DetailDto detailDto = new DetailDto();
+        detailDto.setId(detail.getId());
         detailDto.setMissionIndex(detail.getMissionIndex());
         detailDto.setGoalText(detail.getGoalText());
         detailDto.setGoalList(detail.getGoalList());
@@ -211,20 +212,21 @@ public class MadalartService {
     }
 
 
-    public DetailDto updateDetail(Long detailId, DetailDto detailDto) {
-        Detail detail = detailRepository.findById(detailId)
-                .orElseThrow(() -> new RuntimeException("Detail not found with id: " + detailId));
+    public DetailDto updateDetail(Long missionIndex, DetailDto detailDto) {
+        Detail detail = detailRepository.findByMissionIndex(missionIndex)
+                .orElseThrow(() -> new RuntimeException("Detail not found with missionIndex: " + missionIndex));
+
 
 
         detail.setGoalList(detailDto.getGoalList());
         detail.setGoalText(detailDto.getGoalText());
-
 
         Detail savedDetail = detailRepository.save(detail);
 
 
         DetailDto updatedDto = new DetailDto();
         updatedDto.setMissionIndex(savedDetail.getMissionIndex());
+        updatedDto.setId(savedDetail.getId());
         updatedDto.setGoalList(savedDetail.getGoalList());
         updatedDto.setGoalText(savedDetail.getGoalText());
         updatedDto.setUserId(savedDetail.getMember().getUserId());
