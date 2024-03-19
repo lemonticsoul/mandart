@@ -45,7 +45,11 @@ public class MandalartController {
     @GetMapping("/title")
     public ResponseEntity<Object> getTitle(@PathVariable String userId) {
         TitleDto title = madalartService.getTitleByUserId(userId);
+        if (title==null){
+            return ResponseEntity.badRequest().body("null값입니다");
+        }
         return ResponseEntity.ok(title);
+
     }
 
     @GetMapping("details")

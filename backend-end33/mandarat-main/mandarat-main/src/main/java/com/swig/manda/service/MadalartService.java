@@ -83,6 +83,7 @@ public class MadalartService {
                 .orElseThrow(() -> new RuntimeException("Member not found with userId: " + detailDto.getUserId()));
 
         Detail detail = new Detail();
+        detail.setMissionIndex(detailDto.getMissionIndex());
         detail.setGoalList(detailDto.getGoalList());
         detail.setGoalText(detailDto.getGoalText());// 직접 할당
         detail.setMember(member);
@@ -104,6 +105,7 @@ public class MadalartService {
         List<MainTopic> mainTopics = mainRepository.findByMember_UserId(userId);
 
 
+
         List<MainTopicDto> mainTopicDtos = mainTopics.stream()
                 .map(this::convertEntityToDto)
                 .collect(Collectors.toList());
@@ -114,6 +116,10 @@ public class MadalartService {
     public TitleDto getTitleByUserId(String userId){
 
         Title title= titleRepository.findByMember_UserId(userId);
+
+        if (title == null) {
+            return null;
+        }
 
         TitleDto titleDto=new TitleDto();
         titleDto.setId(title.getId());
@@ -127,6 +133,7 @@ public class MadalartService {
     public List<DetailDto> getAllDetailsByUserId(String userId) {
 
         List<Detail> details = detailRepository.findByMember_UserId(userId);
+
 
 
         List<DetailDto> detailDtos = details.stream()
