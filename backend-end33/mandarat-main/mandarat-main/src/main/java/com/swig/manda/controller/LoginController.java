@@ -171,12 +171,15 @@ public class LoginController {
         try {
 
             Optional<Member> optionalMember = memberRepository.findByUserId(pwUpdateDto.getUserId());
-            Member member = optionalMember.get();
-            String currentPassword = member.getPassword();
 
             if (!optionalMember.isPresent()) {
                 return ResponseEntity.badRequest().body("사용자를 찾을 수 없습니다.");
             }
+
+            Member member = optionalMember.get();
+            String currentPassword = member.getPassword();
+
+
 
             if (!bCryptPasswordEncoder.matches(pwUpdateDto.getPassword(), currentPassword)) {
                 return ResponseEntity.badRequest().body("현재 비밀번호가 정확하지 않습니다.");
