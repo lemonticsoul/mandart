@@ -16,6 +16,9 @@ public class Detail {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private Long missionIndex;
 
 
