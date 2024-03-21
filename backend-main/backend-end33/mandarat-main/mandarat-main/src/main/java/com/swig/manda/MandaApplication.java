@@ -23,5 +23,4 @@ public class MandaApplication {
 		return new BCryptPasswordEncoder();
 	}
 
-
 }
