@@ -1,1 +1,7 @@
-https://github.com/lemonticsoul/web_advanced/assets/127959482/f465a706-e0d6-433d-b7ac-b3347b9a4588
+## 만다라트 투두 서비스 만두 백엔드 부분
+
+![image](https://github.com/lemonticsoul/mandart/assets/127959482/39376764-d718-4096-9ac6-4558bddf05ee)
+
+## STACK
+
+JAVA 17,Orcle Cloud,Spring boot,mysql,Jpa
