@@ -16,7 +16,7 @@ https://mandomando.swygbro.com/
 
 
 
-**JAVA 17,Orcle Cloud,Spring boot,mysql,Jpa**
+**JAVA 17,Oracle Cloud,Spring boot,mysql,Jpa**
 
 
 ## Road Map
