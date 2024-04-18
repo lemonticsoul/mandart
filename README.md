@@ -18,6 +18,11 @@
 
 ![제목 없는 다이어그램 drawio (1)](https://github.com/lemonticsoul/mandart/assets/127959482/8057aba8-5d66-47ed-88ac-cfe8cfcb4f08)
 
+## ERD
+
+![image](https://github.com/lemonticsoul/mandart/assets/127959482/3650336a-6976-4eb8-87b9-69c827d52124)
+
+
 
 ## 개발 과정
 
