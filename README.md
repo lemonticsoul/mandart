@@ -41,6 +41,7 @@ https://mandomando.swygbro.com/
   <li>아이디찾기</li>
   <li>비번 찾기</li>
   <li>만다라트 수정/저장/조회 기능</li>
+  <li>REST API</li>
 </ul>
 
 ## Road Map
