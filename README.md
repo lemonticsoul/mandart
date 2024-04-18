@@ -6,6 +6,7 @@
 
 ![image](https://github.com/lemonticsoul/mandart/assets/127959482/e9c17f8d-0a56-439c-989b-14fa232cde0c)
 
+++도움을 주신분들(스위프 3기:인프라 조요한,프론트엔드 남민기,홍지상 디자이너:정은지,조혜윤 기획:이다현)
 ## 배포링크
 
 https://mandomando.swygbro.com/
