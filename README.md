@@ -33,6 +33,16 @@ https://mandomando.swygbro.com/
 **JAVA 17,Oracle Cloud,Spring boot,mysql,Jpa**
 
 
+
+## 구현 기능
+<ul>
+  <li>회원가입</li>
+  <li>로그인(스프링 시큐리티 구현)</li>
+  <li>아이디찾기</li>
+  <li>비번 찾기</li>
+  <li>만다라트 수정/저장/조회 기능</li>
+</ul>
+
 ## Road Map
 
 ![제목 없는 다이어그램 drawio (1)](https://github.com/lemonticsoul/mandart/assets/127959482/8057aba8-5d66-47ed-88ac-cfe8cfcb4f08)
