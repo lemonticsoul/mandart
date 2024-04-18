@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/backend-end33.iml" filepath="$PROJECT_DIR$/.idea/backend-end33.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.swig.manda.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.swig.manda.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/manda.main.iml" filepath="$PROJECT_DIR$/.idea/modules/manda.main.iml" />
     </modules>
   </component>
