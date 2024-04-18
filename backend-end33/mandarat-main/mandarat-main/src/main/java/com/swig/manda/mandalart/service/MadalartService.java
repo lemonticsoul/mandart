@@ -46,7 +46,7 @@ public class MadalartService {
                 .orElseThrow(() -> new RuntimeException("Member not found with userId: " + mainTopicDto.getUserId()));
 
         MainTopic mainTopic = new MainTopic();
-        mainTopic.setMissionList(mainTopicDto.getMissionList()); // 직접 할당
+        mainTopic.setMissionList(mainTopicDto.getMissionList()); // 직접 할당 gg
         mainTopic.setMember(member);
 
         MainTopic savedMainTopic = mainRepository.save(mainTopic);
